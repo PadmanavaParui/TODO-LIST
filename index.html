@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- the doctype html tag tells the browser that this is an HTML5 document -->
+<!-- the doctype declaration is not an HTML tag. it tells the browser what type of document to expect -->
+<!-- html lang = 'en' tells the browser that the language is English -->
+<!-- the html tag is the root element of an HTML page -->
+<html lang="en">
+<!-- the head tag contains meta information about the document -->
+<!-- like in human body head is the top part.-->
+<!-- it displays the title of the tab on top-->
+<head>
+    <!-- the meta tag provides meta data about the document -->
+    <!-- meta data is data about data. it provides information about the document, like character set, author, description, keywords, and viewport settings -->
+    <!-- the viewport meta tag is used to control the layout on mobile browsers -->
+    <!-- the charset meta tag specifies the character encoding for the document -->
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An advanced TODO list application" />
+     -->
+    
+    <meta charset="UTF-8" />
+    <!-- the meta tag specifies the character set for the document -->
+    <!-- the title tag specifies the title of the document -->
+    <title>Advanced TODO list</title>
+    <!-- the link tag is used to link external resources like stylesheets -->
+    <!-- the rel attribute specifies the relationship between the current document and the linked document -->
+    <!-- the href attribute specifies the URL of the linked document -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- the script tag is used to link external JavaScript files -->
+    <!-- the defer attribute tells the browser to execute the script after the document has been parsed -->
+    <!-- kit font awesome-->
+    <script src="script.js" defer></script>   
+</head>
+
+<!-- the charset is the property of the meta tag. similarly rel and href are properties of the link tag. similarly src and defer are properties of the script tag-->
+
+<!-- the body tag contains the content of the document -->
+<!-- the body tag contains everything that would be displayed on the main part of the webpage -->
+<!-- we use opening and closing tag to define different different elements and regions of the webpage -->
+<body>
+    <div class="background">
+    <div class ="header">
+        <h1 class="highlight">My TODO List</h1>
+        <p class="description">An advanced TODO list application with dark mode and task management features.</p>
+    </div>
+    <div class="container">
+        <div class= "making-separations" >
+        <form id="todo-form" id = "flex-left">
+            <div class="form-group">
+                <input type="text" placeholder="Add a new task..." required />
+                <input type="date" required />
+                <select id="todo-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Add</button>
+            </div>
+        </form>
+
+        <div id = "flex-right">
+            <h2>Tasks</h2>
+                <ul id="todo-list"></ul>
+        </div>
+        </div>
+    
+
+
+    </div>
+    <div class="footer">
+        <div id = "dark-mode">
+            <button>Toggle Dark Mode</button>
+        </div>
+    </div>
+    </div>
+</body>
+
+
+</html>
