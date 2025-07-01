@@ -28,7 +28,8 @@
     <!-- the script tag is used to link external JavaScript files -->
     <!-- the defer attribute tells the browser to execute the script after the document has been parsed -->
     <!-- kit font awesome-->
-    <script src="script.js" defer></script>   
+    <link rel="icon" href="icon-images\ikon\favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <!-- the charset is the property of the meta tag. similarly rel and href are properties of the link tag. similarly src and defer are properties of the script tag-->
@@ -38,40 +39,52 @@
 <!-- we use opening and closing tag to define different different elements and regions of the webpage -->
 <body>
     <div class="background">
-    <div class ="header">
-        <h1 class="highlight">My TODO List</h1>
-        <p class="description">An advanced TODO list application with dark mode and task management features.</p>
-    </div>
-    <div class="container">
-        <div class= "making-separations" >
-        <form id="todo-form" id = "flex-left">
-            <div class="form-group">
-                <input type="text" placeholder="Add a new task..." required />
-                <input type="date" required />
-                <select id="todo-priority">
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-                <button type="submit">Add</button>
+        <div class="header">
+            <div class="logo-name">
+            <h1 class="highlight">My TODO List</h1>
+            <div class="logoclass"></div>
             </div>
-        </form>
-
-        <div id = "flex-right">
-            <h2>Tasks</h2>
-                <ul id="todo-list"></ul>
+            <p class="description">An advanced TODO list application with dark mode and task management features.</p>
         </div>
-        </div>
-    
+        <div class="container">
+            <div class="making-separations">
+                <form id="todo-form" id="flex-left">
+                    <div class="form-group">
+                        <input id="newtask" type="text" placeholder="Add a new task..." required />
+                        <input id="task-date" type="date" required />
+                        <select id="todo-priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        <button type="addtask" id = "submit">Add</button>
+                    </div>
+                </form>
+
+                <div id="flex-right">
+                    <div style = "display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;">
+                    <h2>Tasks</h2>
+                    <ul id="todo-list"></ul>
+                    </div>
+                </div>
+            </div>
 
 
-    </div>
-    <div class="footer">
-        <div id = "dark-mode">
-            <button>Toggle Dark Mode</button>
+
+        </div>
+        <div class="footer">
+            <div id="dark-mode">
+                <button>Toggle Dark Mode</button>
+            </div>
         </div>
     </div>
-    </div>
+
+
+
+    <script src="script.js"></script>
 </body>
 
 
